@@ -1,0 +1,19 @@
+language: scala
+
+jdk:
+  # sbt 1 does not support JDK 7 or below: https://github.com/sbt/sbt/issues/4219
+  - oraclejdk8
+  - oraclejdk9
+  - oraclejdk10
+  - oraclejdk11
+  - oraclejdk-ea
+  - openjdk8
+  - openjdk9
+  - openjdk10
+  - openjdk11
+  - openjdk-ea
+
+scala:
+  - 2.12.6
+
+script: sbt ++$TRAVIS_SCALA_VERSION clean test
